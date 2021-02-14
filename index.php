@@ -23,7 +23,7 @@
         <input type="checkbox" name="interest">Programming<br>
         <input type="checkbox" name="interest">DANCING<br>
         <input type="checkbox" name="interest">MUSIC<br>
-        <input type="submit" value="interest" name="Submit">
+        <input type="submit" value="Submit" name="Submit">
         <input type="reset">
     </form>
     </body>
