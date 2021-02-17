@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>JavaScript</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            background-color: blueviolet;
+            border-radius: 50%; /*This changes the side circles*/
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" onclick="changeColor()"></div>
+    <script>
+        count = 0;
+        colors = ["red","green","pink","yellow","blue"];
+        var digits = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+
+        function randomColorgenerate(){
+            low = 0;
+            high = 15;
+            color = '#';
+            for(i=0;i<6;i++){
+                color = color+digits[low+Math.floor(Math.random()*(high+1-low))];
+            }
+            return color;
+        }
+        function changeColor(){
+            element = document.getElementById('div1');
+            //element.setAttribute("background-color","red");
+            // This below line will change the color of the circle
+            //element.style.backgroundColor="red";
+            color = randomColorgenerate();
+            element.style.backgroundColor = colors[(count++) % colors.length];
+            element.style.backgroundColor = color;
+            console.log(color);
+        }
+    </script>
+</body>
+</html>
